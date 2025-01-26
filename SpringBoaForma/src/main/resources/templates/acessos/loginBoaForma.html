@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="loginBoaForma.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="login-box">
+    
+          <div class="logo"> <img src="" alt="Logo"> </div>
+    
+          <form>
+            <label for="username">Nome</label>
+            <input type="text" id="username" placeholder="Nome / Matrícula">
+            
+            <label for="password">Senha</label>
+            <input type="password" id="password" placeholder="Senha">
+            
+            <div class="options">
+              <label>
+                <input type="checkbox"> Lembre-se de mim
+              </label>
+              <a href="#" class="forgot-password">Esqueci a senha</a>
+            </div>
+            
+            <button type="submit">Entrar →</button>
+            
+            <div class="register">
+              Não é cadastrado? <a routerLink="/registro" routerLinkActive="selected">Registre-se</a>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+      
+</body>
+</html>
