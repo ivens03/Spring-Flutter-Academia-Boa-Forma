@@ -4,9 +4,13 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
-//private String servicoEscolhido;
-//private String tipoPagamento;
-//private String qualObjetivo;
+//private String servicoEscolhido; < Diaria e mensal >
+//private String tipoPagamento; < Dinheiro, Pix, Debito e Credito >
+//private String qualObjetivo = < Força, correção, hipertrofica, emagrecer, bundão, piroca >
+
+/*
+    Força
+*/
 
 @Entity
 @Table(name = "tb_alunos")
@@ -16,7 +20,7 @@ public class alunoModel implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long idAluno;
-    public String nomeAluno;
+    public  String nomeAluno;
     private Date dataNascimento;
     private Date dataRegistroSistema;
     private String numeroTelefonicoAluno;
