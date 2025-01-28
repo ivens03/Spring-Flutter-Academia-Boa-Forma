@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gerenciamento de Alunos da Academia">
+    <title>Gerenciar Alunos - Academia</title>
+    <link rel="stylesheet" href="css/gerenciarAluno.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">LOGO</div>
+            <h1>Gerenciar Alunos - Academia</h1>
+            <nav class="header-icons">
+                <a href="homeADM.html" class="icon" aria-label="Voltar">
+                    <i class="fa-solid fa-arrow-left"></i> Voltar
+                </a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="search">
+                <input type="text" id="search" placeholder="Pesquisar aluno..." oninput="filterTable()">
+            </section>
+
+            <section class="student-list">
+                <table id="studentTable">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Plano</th>
+                            <th>Aulas Matriculadas</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Exemplo de aluno -->
+                        <tr>
+                            <td>João Silva</td>
+                            <td>Plano Premium</td>
+                            <td>Musculação, Yoga</td>
+                            <td>Ativo</td>
+                            <td>
+                                <a href="editarAluno.html" class="edit-btn"><i class="fa-solid fa-pen"></i> Editar</a>
+                                <button class="delete-btn" onclick="deleteStudent()"><i class="fa-solid fa-trash"></i> Excluir</button>
+                            </td>
+                        </tr>
+                        <!-- Outros alunos podem ser listados aqui -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 - Sistema de Gestão da Academia.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Função para filtrar a tabela conforme a busca
+        function filterTable() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById('search');
+            filter = input.value.toUpperCase();
+            table = document.getElementById('studentTable');
+            tr = table.getElementsByTagName('tr');
+            
+            for (i = 1; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName('td')[0]; // Filtra pelo nome
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = '';
+                    } else {
+                        tr[i].style.display = 'none';
+                    }
+                }
+            }
+        }
+
+        // Função de exemplo para excluir um aluno
+        function deleteStudent() {
+            if (confirm("Tem certeza de que deseja excluir este aluno?")) {
+                // Aqui você pode adicionar o código para excluir o aluno
+                alert("Aluno excluído com sucesso.");
+            }
+        }
+    </script>
+</body>
+</html>

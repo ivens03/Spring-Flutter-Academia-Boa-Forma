@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gerenciar Professores - Academia">
+    <title>Gerenciar Professores - Academia</title>
+    <link rel="stylesheet" href="css/gerenciarProfessor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">LOGO</div>
+            <h1>Gerenciar Professores</h1>
+            <nav class="header-icons">
+                <a href="homeADM.html" class="icon" aria-label="Voltar">
+                    <i class="fa-solid fa-arrow-left"></i> Voltar
+                </a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="manage">
+                <h2>Lista de Professores</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Especialização</th>
+                            <th>Telefone</th>
+                            <th>Disponibilidade</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>João Silva</td>
+                            <td>Musculação</td>
+                            <td>(11) 99999-9999</td>
+                            <td>Segunda a Sexta, 9h às 18h</td>
+                            <td>
+                                <a href="editarProfessor.html" class="btn-editar">Editar</a>
+                                <button class="btn-excluir">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ana Souza</td>
+                            <td>Yoga</td>
+                            <td>(11) 98888-8888</td>
+                            <td>Segunda, Quarta, Sexta, 7h às 10h</td>
+                            <td>
+                                <a href="editarProfessor.html" class="btn-editar">Editar</a>
+                                <button class="btn-excluir">Excluir</button>
+                            </td>
+                        </tr>
+                        <!-- Mais professores aqui -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 - Sistema de Gestão da Academia.</p>
+        </footer>
+    </div>
+</body>
+</html>

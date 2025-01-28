@@ -1,57 +1,64 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
-    border: 0;
     box-sizing: border-box;
 }
 
-img {
-    width: 6%;
-}
-
+/* Estilo global */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    margin: 0;
 }
 
 .container {
-    max-width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
+/* Cabeçalho */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #003366;
     color: white;
-    padding: 1% 1.5%;
+    padding: 15px 20px;
+    border-radius: 5px;
 }
 
 .logo {
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
-/* Lembrar de por os incones */
 .header-icons {
     display: flex;
     gap: 20px;
 }
 
 .icon {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
     cursor: pointer;
 }
 
+.icon i {
+    margin-right: 5px;
+}
 
+/* Conteúdo principal */
 main {
-    margin-top: 3%;
+    margin-top: 20px;
 }
 
 .button-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 5rem;
-    margin-left: 5%;
-    margin-right: 5%;
+    gap: 20px;
     justify-content: center;
 }
 
@@ -59,26 +66,55 @@ main {
     background-color: #0055a5;
     color: white;
     border: none;
-    padding: 25px 15px;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 15px;
-    flex: 1 1 calc(33.333% - 40px);
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 10px;
     text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 150px;
+}
+
+.btn img {
+    width: 40px;
+    margin-bottom: 10px;
 }
 
 .btn:hover {
     background-color: #003366;
 }
 
+/* Rodapé */
+.footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
     .btn {
-        flex: 1 1 calc(50% - 40px);
+        width: 100%;
+        height: auto;
     }
 }
 
 @media (max-width: 480px) {
-    .btn {
-        flex: 1 1 100%;
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-icons {
+        flex-direction: column;
+        gap: 10px;
     }
 }
